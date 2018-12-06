@@ -12,7 +12,7 @@
 		gulp.src("./src/**/*.css").pipe(cleancss()).pipe(gulp.dest("./dist"))
 	        
 	})
-//	
+//г©нч╣п	
 	gulp.task("buildJS",()=>{
 		gulp.src("./src/scripts/*.js")
 	        .pipe(babel({
