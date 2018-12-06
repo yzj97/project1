@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "clean-css": "^4.2.1",
+    "clear-css": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

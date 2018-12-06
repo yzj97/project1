@@ -1,0 +1,1 @@
+"use strict";require(["../scripts/config.js"],function(){require(["jquery","common","font","swiper"],function(o,e,i,n){new n(".swiper-container",{autoplay:!0,loop:!0,pagination:{el:".swiper-pagination"}}),o.ajax({url:"https://localhost:10002/listmore?pageNo=2&pageSize=15",success:function(o){console.log(o)}})})});
