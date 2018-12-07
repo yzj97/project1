@@ -2,3 +2,7 @@
     opacity: $val/100;
     filter: alpha(opacity=$val);
 }
+
+@mixin color(){
+    color:white;
+}

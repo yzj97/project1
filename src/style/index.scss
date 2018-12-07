@@ -1,8 +1,12 @@
 @import "_minxins";
 
-.box{
-    width:100px;
-    @include opacity(80);
+$val : 100px;
+.swiper-container{
+    width:$val*6;height: $val*2;margin: 50px auto;
+        .swiper-slide{
+             text-align: center;font:20px/200px "";
+             width:100px;
+             @include opacity(80);
+             @include color();
+            }
 }
-.swiper-container{width: 400px;height: 200px;margin: 50px auto;}
-.swiper-slide{text-align: center;font:20px/200px "";}
