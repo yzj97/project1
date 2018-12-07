@@ -13,6 +13,10 @@
 		.pipe(gulp.dest("./dist/style"))
 	        
 	})
+<<<<<<< HEAD
+=======
+//г©нч╣п	
+>>>>>>> 26229e0235c63cc3757cee4c6cfac62e79386c15
 	gulp.task("buildJS",()=>{
 		gulp.src("./src/scripts/*.js")
 	        .pipe(babel({
