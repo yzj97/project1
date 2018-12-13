@@ -2,28 +2,738 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>主页</title>
 		<link rel="stylesheet" type="text/css" href="../style/swiper.css"/>
 		<link rel="stylesheet" type="text/css" href="../style/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../static/font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/public.css"/>
 	</head>
 	<body>	
-		<div class="swiper-container">
-			  <div class="swiper-wrapper">
-			    <div class="swiper-slide" style="background: red;">asd</div>
-			    <div class="swiper-slide" style="background: green;">ads</div>
-			    <div class="swiper-slide" style="background: blue;">asd</div>
-			    <div class="swiper-slide" style="background: red;"><i class="iconfont icon-kaixin"></i></div>
-			    <div class="swiper-slide" style="background: green;">asd</div>
-			    <div class="swiper-slide" style="background: blue;">asd</div>
-			    <div class="swiper-slide" style="background: red;">ad</div>
-			    <div class="swiper-slide" style="background: green;">asd</div>
-			    <div class="swiper-slide" style="background: blue;">sad</div>
-			  </div>
-			  <div class="swiper-pagination"></div>
+		
+		<div id="top" class="clear">
+			<div class="margin">
+				<div class="top-l">
+					 <a href="http://www.shuhua.com/" target="_blank">舒华商城</a>
+					 <span>|</span>
+					 <a href="http://www.shuhua.com/" target="_blank">SHUA OVERSEA</a>
+					 <span>|</span>
+					 <a href="" class="shoucang">收藏舒华官方商城</a>
+					 <span>|</span>
+					 <a href="" class="weixin">官方微信</a>
+				</div>
+				<div class="top-car">购物车<span>(0)</span>
+					<div class="car-listtext">
+						<div class="car-listtext-contont">您购物车里还没有商品快去选购吧。</div>
+					</div>
+				</div>
+				<div class="top-bull">商城公告
+				  <div class="bull-listtext">
+				  	   <div class="bull-listtext-contont">暂无公告</div>
+				  </div>
+				</div>
+				<div class="top-info">舒华商城欢迎您，请  
+					<a href="">登录</a>
+					 <span>|</span> 
+					 <a>注册</a>
+				    <span class="special">|</span>
+				</div>
+			</div>
+		</div>
+		<div id="header" class="clear">
+			<div class="margin clear">
+			    <a class="logo"><img src="../static/icon/logo.png"></a>
+			    <div class="address">
+			    	<div class="address-t">
+			    		<div class="index-city">
+			    			<ul>
+			    				<li>
+			    					<span class="ff8 fl">A-G</span>
+				                    <span class="dpl">
+				                        <a href="javascript:void(0);" onclick="redirectProvince('2');">北京</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('3');">安徽</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('32');">重庆</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('4');">福建</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('6');">广东</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('5');">甘肃</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('7');">广西</a>
+				                        <a href="javascript:void(0);" onclick="redirectProvince('8');">贵州</a>
+				                    </span>
+				                </li>
+				                 <li class="mt10">
+					                    <span class="ff8 fl">H-J</span>
+					                    <span class="dpl">
+					                        <a href="javascript:void(0);" onclick="redirectProvince('13');">湖北</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('14');">湖南</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('10');">河北</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('11');">河南</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('9');">海南</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('12');">黑龙江</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('16');">江苏</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('15');">吉林</a>
+					                        <a href="javascript:void(0);" onclick="redirectProvince('17');">江西</a>
+					                    </span>
+					            </li>
+					            <li class="mt10">
+						                    <span class="ff8 fl">L-S</span>
+						                    <span class="dpl">
+						                        <a href="javascript:void(0);" onclick="redirectProvince('18');">辽宁</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('19');">内蒙古</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('20');">宁夏</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('21');">青海</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('22');">山东</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('25');">上海</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('23');">山西</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('24');">陕西</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('26');">四川</a>
+						                    </span>
+						              </li>
+						          <li class="mt10">
+						                    <span class="ff8 fl">T-Z</span>
+						                    <span class="dpl">
+						                        <a href="javascript:void(0);" onclick="redirectProvince('27');">天津</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('29');">新疆</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('28');">西藏</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('30');">云南</a>
+						                        <a href="javascript:void(0);" onclick="redirectProvince('31');">浙江</a>
+						                    </span>
+						                </li>
+		    			      </ul>
+			    		</div>
+			    	</div>
+			    	<div class="address-b"></div>
+			    </div>
+			    <div class="search">
+			    	<input type="text" class="search-l">
+			    	<input type="button" class="search-r">
+			    	<span>X6</span>
+			    	<span>X3</span>
+			    	<ul class="search-list">
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">X6</span><span>约有1件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">X3</span><span>约有2件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">X5</span><span>约有1件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">罗伯特</span><span>约有2件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">阿波罗5号</span><span>约有3件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">力量器械</span><span>约有30件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">动感单车</span><span>约有50件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">健腹板</span><span>约有30件</span></a></li>
+			    		<li><a href="javascript:void(0);"><span class="search-list-cont">哑铃</span><span>约有40件</span></a></li>
+			    	</ul>
+			    </div>
+			</div>
+		</div>
+		<div id="navigation">
+			<div class="margin clear">
+				
+				<ul class="nav">
+					<li class="nav-item1">
+						<a  class="te" href="#">全部商品</a>
+						<div class="list clear">
+							<ul class="list-item">
+								<li class="te2 list-item-goods">
+									<a href="" class="list-item-big">跑步机/智能<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_first">
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+									</ul>
+								</li>
+								<li class="list-item-goods">
+									<a href="" class="list-item-big">健身机/动感单车<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_second">
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+									</ul>
+								</li>
+								<li class="list-item-goods">
+									<a href="" class="list-item-big">椭圆机/倒立机<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_thr">
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+									</ul>	
+								</li>
+								<li class="list-item-goods">
+									<a href="" class="list-item-big">肌肉训练<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_four" style="width: 380px;">
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+									</ul>
+								</li>
+								<li class="list-item-goods">
+									<a href="" class="list-item-big">哑铃/仰卧盘<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_five">
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+									</ul>	
+								</li>
+								<li class="list-item-goods">
+									<a href="" class="list-item-big">瑜伽运动<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_six" style="width: 380px;">
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span> </span></a></li>
+										<li><a href="#"><img src=" "><span></span></a></li>
+										<li><a href="#"><img src=" "><span></span></a></li>
+									</ul>
+								</li>
+								<li class="list-item-goods">
+									<a href="" class="list-item-big">按摩养生<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_sev">
+										<li><a href="#"><img src=""><span> </span></a></li>
+										<li><a href="#"><img src=""><span> </span></a></li>
+										<li><a href="#"><img src=""><span> </span></a></li>
+										<li><a href="#"><img src=""><span> </span></a></li>
+										
+									</ul>	
+								</li>
+								<li class="list-item-goods ">
+									<a href="" class="list-item-big">户外运动<i class="sanjiao"></i></a>
+									<ul class="hide-list jsonp_egt">
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+										<li><a href="#"><img src=""><span></span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item"><a href="#">首页</a></li>
+					<li class="nav-item"><a href="#">舒华</a></li>
+					<li class="nav-item"><a href="#">健身知识</a></li>
+					<li class="nav-item"><a href="#">实体店</a></li>
+					<li class="nav-item"><a href="#">舒华健身工程案例 </a></li>
+					<li class="nav-item"><a href="#">企业团购</a></li>
+					<li class="nav-item2"><a href="#"><span class="last">舒华公司唯一官方商城</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="margin">
+                 <div class="swiper-container banner-navs">
+                     <div class="swiper-wrapper">
+						    <div class="swiper-slide"><img  class="banner-json" src="../static/banner/1536173759473623135.jpg"></div>
+						    <div class="swiper-slide"><img  class="banner-json" src="../static/banner/1536173766209463723.jpg"></div>
+						    <div class="swiper-slide"><img class="banner-json" src="../static/banner/1536173776588067419.jpg"></div>
+						    <div class="swiper-slide"><img  class="banner-json" src="../static/banner/1534116401443421643.jpg"></div>
+					  </div>
+					  <div class="swiper-pagination"></div>
+		              <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+					</div>				
+			</div>
+		</div>
+		
+		<div id="goodslist">
+			<div class="margin">
+				<div class="goodslist-item">
+					<img src="../static/goods/1540145569600621713.jpg">
+				</div>
+				<div class="goodslist-item">
+					<img src="../static/goods/1490047069921223499.jpg">
+				</div>
+				<div class="goodslist-item">
+					<img src="../static/goods/1490048727073791646.jpg">
+				</div>
+				<div class="goodslist-item">
+					<img src="../static/goods/1532288807805875385.jpg">
+				</div>
+			</div>
+		</div>
+		<div id="goodsnav">
+			<div class="margin">
+				<div class="goodsnav-bar  clear">
+					<span class="goodsnav-bar-tle">明星爆款</span>
+					<!--<div class="goodsnav-bar-btn">
+					     <i class="btn-pre"></i>
+					     <i class="btn-nxt"></i>
+					</div>-->
+				</div>
+				<div class="swiper-container goodsnav-list">
+                     <div class="swiper-wrapper">
+						    <div class="swiper-slide goodsnav-list-first">
+						    	<ul class="goodsnav-list-first-goods"> 
+						    		<li class="goodsnav-item" style=" border-top:1px solid #ffac13;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1516579493921261967.png">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style=" border-top:1px solid #83c44e;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1516579493921261967.png">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style=" border-top:1px solid #83c44e;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1516579493921261967.png">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style="border-top:1px solid #2196f3;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1516579493921261967.png">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style="border-top:1px solid #00c0a5;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1516579493921261967.png">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    	</ul>
+						    </div>
+						    <div class="swiper-slide goodsnav-list-second">
+						    	<ul class="goodsnav-list-second-goods"> 
+						    		<li class="goodsnav-item" style=" border-top:1px solid #ffac13;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1527703367179905547_160x160.jpg">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style=" border-top:1px solid #83c44e;"> 
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1527703367179905547_160x160.jpg">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style=" border-top:1px solid #83c44e;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1527703367179905547_160x160.jpg">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style="border-top:1px solid #2196f3;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1527703367179905547_160x160.jpg">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    		<li class="goodsnav-item" style="border-top:1px solid #00c0a5;">
+						    			<a class="link" href="#">
+						    				<img src="../static/goods/1527703367179905547_160x160.jpg">
+						    				<span>舒华A3跑步机</span>
+						    				<b>微信运动互联</b>
+						    				<em>3329元起</em> 
+						    			</a>
+						    		</li>
+						    	</ul>
+						    </div>
+					  </div>
+					   <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="margin">
+				<div class="treadmill">
+					<div class="treadmill-tel clear">
+						<span class="treadmill-tel-name">跑步机</span>
+						<a href="#" class="treadmill-tel-all">查看全部&gt;</a>
+					</div>
+					<div class="treadmill-goods clear"> 
+						<div class="treadmill-goods-left">
+							<img src="../static/goods/1534436057706397903.jpg">
+						</div>
+						<div class="treadmill-goods-right">
+							<ul class="treadmill-goods-list">
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516564628685610217.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<s></s>
+				    				</a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<s></s>
+				    				</a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<s></s>
+				    				</a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				<a>
+								</li>
+								<li class="treadmill-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578366501338830.png">
+									<span>舒华A3跑步机</span>
+				    				<b>微信运动互联</b>
+				    				<em>3329元起</em>
+				    				</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="equipment">
+					<div class="equipment-tel clear">
+						<span class="equipment-tel-name">健身车</span>
+						<a href="#" class="equipment-tel-all">查看全部&gt;</a>
+					</div>
+					<div class="equipment-goods clear"> 
+						<div class="equipment-goods-left">
+							<img src="../static/goods/1534436084835031059.jpg">
+						</div>
+						<div class="equipment-goods-right">
+							<ul class="equipment-goods-list">
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				<a>
+								</li>
+								<li class="equipment-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1516578911138572188.png">
+									<span>舒华B3656S动感单车</span>
+				    				<b>人体工程设计</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="power">
+					<div class="power-tel clear">
+						<span class="power-tel-name">力量器械</span>
+						<a href="#" class="power-tel-all">查看全部&gt;</a>
+					</div>
+					<div class="power-goods clear"> 
+						<div class="power-goods-left">
+							<img src="../static/goods/1534436069665770022.jpg">
+						</div>
+						<div class="power-goods-right">
+							<ul class="power-goods-list">
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+								    <span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>	
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				<a>
+								</li>
+								<li class="power-goods-list-item">
+									<a href="#">
+									<img src="../static/goods/1534437057291862182_160x160.jpg">
+									<span>三头肌训练器</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="massage">
+					<div class="massage-tel clear">
+						<span class="massage-tel-name">按摩养身</span>
+						<a href="#" class="massage-tel-all">查看全部&gt;</a>
+					</div>
+					<div class="massage-goods clear"> 
+						<div class="massage-goods-left">
+							<img src="../static/goods/1534436161877692803.jpg">
+						</div>
+						<div class="massage-goods-right">
+							<ul class="massage-goods-list">
+								<li class="massage-goods-list-item">
+									<a href="#">
+									<img src=" ">
+									<span>舒华新款总裁养身椅</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="news"></s>
+				    				</a>
+								</li>
+								<li class="massage-goods-list-item">
+									<a href="#">
+									<img src=" ">
+									<span>舒华新款总裁养身椅</span>
+				    				<b>人优质柔软靠垫</b>
+				    				<em>3329元起</em>
+				    				<s class="hot"></s>
+				    				</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="friendship-link">
+			<div class="margin">
+				<div class="friendship-link-top">
+					<div class="friendship-link-top-items">全国<a href="#">联保</a></div>
+					<div class="friendship-link-top-items">1000多<a href="#">网点服务</a></div>
+					<div class="friendship-link-top-items">1年<a href="#">整机保修</a></div>
+					<div class="friendship-link-top-items">5年<a href="#">机电质保</a></div>
+				</div>
+				<div class="friendship-link-bottom clear">
+					<div class="friendship-link-about clear">
+						<dl class="friendship-link-about-items">
+							<dt>关于舒华</dt>
+							<dd><a href="#">品牌介绍</a></dd>
+						</dl>
+						<dl class="friendship-link-about-items">
+							<dt>购物指南</dt>
+							<dd><a href="#">购物指南</a></dd>
+						</dl>
+						<dl class="friendship-link-about-items">
+							<dt>支付方式</dt>
+							<dd><a href="#">支付方式</a></dd>
+						</dl>
+						<dl class="friendship-link-about-items">
+							<dt>物流与配送</dt>
+							<dd><a href="#">物流配送</a></dd>
+						</dl>
+						<dl class="friendship-link-about-items">
+							<dt>售后服务</dt>
+							<dd><a href="#">售后服务</a></dd>
+						</dl>
+					</div>
+					<div class="friendship-link-server">
+						<span>400-887-8855</span>
+						<b>售前电话：0595-85993396</b>
+						<em>周一至周日 8:00-17:30</em>
+						<a href="online-server">24小时在线客服</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="margin">
+				<p>2012 SHUA All Rights Reserver. 舒华体育股份有限公司 版权所有，禁止非法复制闽ICP备05005944号-1</p>
+		        <div class="footer-link">
+		        	<b>友情链接：</b>
+		        	    <a target="_blank" href="http://www.jianshen8.com/" title="健身" >健身</a>
+                        <a target="_blank" href="http://jk.lady8844.com/" title="女性健康" >女性健康</a>
+                        <a target="_blank" href="http://news.ctoy.com.cn/" title="玩具资讯" >玩具资讯</a>
+                        <a target="_blank" href="http://www.cnxz.cn/" title="中国鞋网" >中国鞋网</a>
+                        <a target="_blank" href="http://www.shuhua.com/shua-home/" title="家用跑步机" >家用跑步机</a>
+                        <a target="_blank" href="http://www.ys137.com/ydys/" title="运动养生" >运动养生</a>
+                        <a target="_blank" href="http://www.s.cn/nike-brand.html" title="耐克专卖店" >耐克专卖店</a>
+                        <a target="_blank" href="http://www.shuhua.com/shua-dgdcjg/" title="动感单车多少钱一台" >动感单车多少钱一台</a>
+                        <a target="_blank" href="http://www.yipihuo.com/" title="阿里巴巴网站首页" >阿里巴巴网站首页</a>
+                        <a target="_blank" href="http://www.3dworks.cn/" title="3D打印" >3D打印</a>
+                        <a target="_blank" href="http://www.shuhua.com/" title="健身器材" >健身器材</a>
+                        <a target="_blank" href="http://www.shuhua.com/shua-paobuji/" title="跑步机多少钱一台" >跑步机多少钱一台</a>
+                        <a target="_blank" href="http://www.zhidaogz.com/" title="工作服" >工作服</a>
+                        <a target="_blank" href="http://www.51fit.com.cn/" title="健身" >健身</a>
+		        </div>
+		        <p class="sites">
+                                <span class="sep">|</span><a href="http://www.shuhua.com/subject.html" title="主题" target="_blank">主题</a>
+                </p>
+			</div>
+			
 		</div>
 	</body>
-	<script type="text/javascript" src="../scripts/libs/require.js" data-main = "index.js">
-		
+	<script type="text/javascript" src="../scripts/libs/require.js" data-main = "index.js">	
 	</script>
 </html>

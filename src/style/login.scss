@@ -1,0 +1,246 @@
+@import "_minxins";
+@include top();
+
+
+
+#header{
+    height: 100px;
+    .margin{
+       width: 1226px;
+       margin:0 auto; 
+       .logo{
+           margin-top: 22px;
+       }
+       .title{
+           height: 41px;
+           width: 94px;
+           display: inline-block;
+           font:16px/41px "";
+           margin-top: 30px;
+           text-align: center;
+           color: #333;
+           border-left:1px solid #333;    
+       }
+    }
+}
+
+#main{
+    .bck{
+        position: relative;
+        background: url("../static/banner/bck.jpg") no-repeat;
+        display: block;
+        height: 600px;
+        .login{
+            width: 450px;
+            height: 523px;
+            box-sizing: border-box;
+            padding-top: 70px;
+            background: #FFFFFF;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            margin-left: 100px;
+            .main-layout{
+                width: 358px;
+                height: 418px;
+                margin: 0 auto;
+                
+                .lgn-input{
+                    width:358px ;
+                    height: 114px;
+                    margin-bottom: 14px;
+                    .lgn-input-top{
+                       width: 358px;
+                       height: 48px; 
+                       border: 1px solid #e0e0e0;
+                       margin-bottom: 14px;
+                       .user-icon{
+                           display: inline-block;
+                           width: 48px;
+                           height: 48px;
+                           border-right: 1px solid #e0e0e0;
+                           float: left;
+                           background: url("../static/icon/login-un.png") no-repeat center;
+                       }
+                       .txt{
+                          width: 307px;
+                          height: 48px;
+                          box-sizing: border-box;
+                          padding: 13px 16px 13px 14px;
+                          display: block;
+                          float: right;
+                          font: 12px/22px "";
+                          border: 0;
+                          color: #666;
+                       }
+                    }
+                    .lgn-input-bottom{
+                       width: 358px;
+                       height: 48px; 
+                       border: 1px solid #e0e0e0;
+                       
+                       .pwd-icon{
+                           display: inline-block;
+                           width: 48px;
+                           height: 48px;
+                           border-right: 1px solid #e0e0e0;
+                           float: left;
+                           background: url("../static/icon/login-pwd.png") no-repeat center;
+                       }
+                       .pwd{
+                           color: #666;
+                          width: 307px;
+                          height: 48px;
+                          box-sizing: border-box;
+                          padding: 13px 16px 13px 14px;
+                          display: block;
+                          float: right;
+                          font: 12px/22px "";
+                          border: 0;
+                       }
+                    }
+                }
+                .links-area{
+                    width: 358px;
+                    height: 51px;
+                    box-sizing: border-box;
+                    padding: 10px 0 20px 0;
+                    font-size: 12px;
+                    .is_ini{
+                        width: 13px;
+                        height: 13px;
+                        vertical-align: middle;
+                    }
+                    b{
+                        font-weight: 300;
+                        color: #9d9d9d;
+                    }
+                    span{
+                         color: #9d9d9d;
+                    }
+                    .outer-link{
+                        color: #9d9d9d;
+                        padding: 0 5px;
+                        &:hover{
+                            color: #FF6700;
+                        }
+                    }
+                }
+                .btn-bg{
+                    width: 358px;
+                    height: 46px;
+                    margin-bottom: 24px;
+                    .login-button{
+                        width: 207px;
+                        height: 46px;
+                        color: #FFFFFF;
+                        font: 12px/46px "";
+                        text-align: center;
+                        float: left;
+                        background: #2890A6;
+                        border: 0;
+                    }
+                    .btnadre{
+                        float: right;
+                        height: 44px;
+                        border: 1px #9d9d9d solid;
+                        width: 136px;
+                        color: #9d9d9d;
+                        font: 12px/44px "";
+                        text-align: center;
+                        background:#FFFFFF ;
+                    }
+                }
+                .oth-type-tit{
+                    width: 358px;
+                    height: 84px;
+                    box-sizing: border-box;
+                    padding: 10px 9px;
+                    border: 1px solid #9D9D9D;
+                    text-align: center;
+                    margin: 0 2px;
+                    position: relative;
+                    .qq-link{
+                        display: inline-block;
+                        margin: 0 12px;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        margin-top: 25px;
+                        background-color: #949494; 
+                        .btn-qq-back {
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            background: url("../static/icon/icons_type.png") no-repeat center;
+                            background-position: -19px 0;
+                            background-color: #949494; 
+                            margin: 4px 6px 0 6px;
+                        }  
+                    }
+                    .weibo-link{
+                        background: #949494;
+                        display: inline-block;
+                        margin: 0 12px;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        margin-top: 25px;
+                        background-color: #949494; 
+                        .btn-weibo-back {
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            background: url("../static/icon/icons_type.png") no-repeat center;
+                            background-position: -38px 0;
+                            background-color: #949494; 
+                            margin: 4px 6px 0 6px;
+                        }  
+                        
+                    }
+                    .position-tle{
+                        position: absolute;
+                        top: -10px;
+                        left: 110px;
+                        width: 134px;
+                        height: 21px;
+                        background: #FFFFFF;
+                        text-align: center;
+                        font: 12px/21px "";
+                        color: #9D9D9D;
+                        
+                    }
+                }
+                .return-index{
+                   
+                    width: 138px;
+                    height: 46px;
+                    margin: 0 auto;
+                    border: 1px solid #9D9D9D;
+                     margin-top: 10px;
+                    a{
+                        display: block;
+                         width: 138px;
+                         height: 46px;
+                        color: #9D9D9D;
+                        text-align: center;
+                        font: 12px/46px "";
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+#footer{
+    height: 83px;
+    padding: 5px 0 30px 0;
+    box-sizing: border-box;
+    background: #FAFAFA;
+    .continer-text{
+            hheight: 48px;
+            font:12px/48px "";
+            color: #757575;
+            text-align: center;
+    }
+}

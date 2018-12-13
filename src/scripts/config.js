@@ -5,6 +5,7 @@ requirejs.config({
 		jquery : "libs/jquery.min",
 		swiper : "libs/swiper.min",
 		font : "fontscroll",
-		common : "common"
+		common : "common",
+		_pubilc:"pubilc",
 	}
 })

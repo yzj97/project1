@@ -1,0 +1,162 @@
+@import "_minxins";
+@include top();
+
+#header{
+    height: 100px;
+    .margin{
+       width: 1226px;
+       margin:0 auto; 
+       .logo{
+           margin-top: 22px;
+       }
+       .title{
+           height: 41px;
+           width: 94px;
+           display: inline-block;
+           font:16px/41px "";
+           margin-top: 30px;
+           text-align: center;
+           color: #333;
+           border-left:1px solid #333; 
+           background: #FFFFFF;  
+           
+       }
+    }
+}
+#main{
+    .bck{
+        position: relative;
+        background: url("../static/banner/bck.jpg") no-repeat;
+        display: block;
+        height: 600px;
+        .reg{
+            background-color: #fff;
+            height: 423px;
+            left: 50%;
+            position: absolute;
+            top: 100px;
+            width: 450px;
+            margin-left: 120px;
+            .main-layout{
+                width: 358px;
+                height: 266px;
+                margin: 0 auto;
+                margin-top: 70px;
+                .reg-input{  
+                    width:358px;
+                    height: 48px;
+                    margin-bottom: 14px;    
+                    border: 1px solid #e0e0e0;
+                    .user-icon{
+                        float: left;
+                        width: 48px;
+                        height: 48px;
+                        border-right:1px solid #e0e0e0;
+                        background: url('../static/icon/login-un.png') no-repeat center;
+                    }
+                    .txt{
+                        width: 307px;
+                          height: 48px;
+                          box-sizing: border-box;
+                          padding: 13px 16px 13px 14px;
+                          display: block;
+                          float: right;
+                          font: 12px/22px "";
+                          border: 0;
+                          color: #666;
+                    }
+                }
+                .auth-code{
+                    width: 358px;
+                    height: 64px;
+                    .auth-code-ipt{
+                        width: 212px;
+                        height: 48px;
+                        float: left;
+                        border: 1px #e0e0e0 solid;
+                        .code-icon{
+                            float: left;
+                            width: 48px;
+                            height: 48px;
+                            border-right: 1px solid #e0e0e0;
+                            background: url("../static/icon/login-yzm.png") no-repeat center;
+                        }
+                        .code{
+                              width: 163px;
+                              height: 48px;
+                              box-sizing: border-box;
+                              padding: 13px 16px 13px 14px;
+                              display: block;
+                              float: right;
+                              font: 12px/22px "";
+                              border: 0;
+                              color: #666;
+                        }
+                    }
+                    .auth-code-change{
+                        float: left;
+                        margin-left: 10px;
+                        .auth-code-txt{
+                            width: 110px;
+                            height: 40px;
+                            border: 1px solid #e0e0e0;
+                            text-align: center;
+                            font: 16px/40px "";
+                            color: #FFFFFF;
+                            
+                        }
+                    }
+                }
+                .reg-now{
+                    width: 358px;
+                    height: 138px;
+                    .now{
+                        width: 358px;
+                        height: 46px;
+                        border: 0;
+                        background:#2890A6;
+                        text-align: center;
+                        color: #FFFFFF;
+                        font: 12px/46px "";
+                        margin-bottom: 14px;
+                    }
+                    .msg{
+                        width: 358px;
+                        height: 42px;
+                        margin: 15px 0 14px 0;
+                        text-align: center;
+                        font: 12px/21px "";
+                        color: #9D9D9D;
+                        a{
+                            color: #2890A6;
+                            &:hover{
+                                color: #333333;
+                            }
+                        }
+                    }
+                    .reg-link{
+                        text-align: center;
+                        a{
+                            color: #333333;
+                        }
+                    }
+                } 
+            }
+        }
+      
+    }
+}
+ 
+#footer{
+    height: 83px;
+    padding: 5px 0 30px 0;
+    box-sizing: border-box;
+    background: #FAFAFA;
+    .continer-text{
+            hheight: 48px;
+            font:12px/48px "";
+            color: #757575;
+            text-align: center;
+            
+    }
+}
