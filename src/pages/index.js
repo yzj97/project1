@@ -1,6 +1,6 @@
 
 require(["../scripts/config.js"],function(){
-	require(["jquery","swiper","common","font","_pubilc"],function($,swiper){
+	require(["jquery","swiper","_cookie","_jcookie","_pubilc"],function($,swiper,cookie){
 	        
 	   
 
@@ -133,25 +133,23 @@ require(["../scripts/config.js"],function(){
 //健身机和jsonp_first
         $.ajax({
         	type:"get",
-        	url:'https://dms-dataapi.meizu.com/data/jsdata.jsonp?blockIds=266',
-        	dataType:"jsonp",
-        	success:function(data){
-        		var arr = data.block_266[0].node;
+        	url:'https://localhost:8848/ajax/goodslist.json',
+        	success:function(arr){
         	    $.each($(".equipment-goods-list-item a img"),function(index){
-        	    		$(".equipment-goods-list-item a img").eq(index).attr("src",arr[index].img);
+        	    		$(".equipment-goods-list-item a img").eq(index).attr("src",arr[index+8].src);
         	    })
         	    $.each($(".equipment-goods-list-item a span"), function(index){
-        	    	   $(".equipment-goods-list-item a span").eq(index).html(arr[index].name);
+        	    	   $(".equipment-goods-list-item a span").eq(index).html(arr[index+8].describe);
         	    });
         	    $.each($(".equipment-goods-list-item a b"), function(index){
-        	    	   $(".equipment-goods-list-item a b").eq(index).html(arr[index].skuid);
+        	    	   $(".equipment-goods-list-item a b").eq(index).html(arr[index+8].id);
         	    });
         	    $.each($(".equipment-goods-list-item a em"), function(index){
-        	    	   $(".equipment-goods-list-item a em").eq(index).html(arr[index].skuprice);
-        	    });
-        	    
+        	    	   $(".equipment-goods-list-item a em").eq(index).html(arr[index+8].price);
+        	    });  
         	}
         })
+       
 //banner请求
         $.ajax({
         	type:"get",
@@ -250,35 +248,79 @@ require(["../scripts/config.js"],function(){
                 	}
                 	
                 })
+// 存cookie 
+            var ali = document.querySelectorAll(".equipment-goods-list-item");
+            var ab = document.querySelectorAll(".equipment-goods-list-item a b")
+            for(let i = 0;i<ali.length;i++){
+            	ali[i].onclick = function(){
+            		var id = ab[i].innerHTML;
+            		cookie.setCookie(id,id,7);
+            	}
+            }
+            
+          $.ajax({
+        	type:"get",
+        	url:'https://localhost:8848/ajax/goodslist.json',
+        	success:function(arr){
+        	    $.each($(".treadmill-goods-list-item a img"),function(index){
+        	    		$(".treadmill-goods-list-item a img").eq(index).attr("src",arr[index].src);
+        	    })
+        	    $.each($(".treadmill-goods-list-item a span"), function(index){
+        	    	   $(".treadmill-goods-list-item a span").eq(index).html(arr[index].describe);
+        	    });
+        	    $.each($(".treadmill-goods-list-item a b"), function(index){
+        	    	   $(".treadmill-goods-list-item a b").eq(index).html(arr[index].id);
+        	    });
+        	    $.each($(".treadmill-goods-list-item a em"), function(index){
+        	    	   $(".treadmill-goods-list-item a em").eq(index).html(arr[index].price);
+        	    });  
+        	}
+        })	 
+        
+        
+//存Cookie
+        var alis = document.querySelectorAll(".treadmill-goods-list-item");
+        var eab = document.querySelectorAll(".treadmill-goods-list-item a b");
+            for(let i = 0;i<alis.length;i++){
+            	alis[i].onclick = function(){            		
+            		var id = eab[i].innerHTML;            		
+            		cookie.setCookie(id,id,7);
+            	}
+            }
+                
+
 	})    
 })
 //跑步机请求接口
  window.onload = function(){	
-	        	console.log(123)
-	        	var _script = document.createElement("script");
-	        	_script.src = "https://shop.yinyuetai.com/goods/listForArt.json?callback=back";
-	        	document.body.appendChild(_script);
-	       }	        
-	       function back(datas){
-	       	var _treadmill = document.querySelector(".treadmill-goods-list")
-	       	
-	       	var arr = datas.data;
-	       	var str = ''
-	       	
-	       	for(var i = 0; i<datas.data.length;i++){		
-	       		str = str + `
-	       		   <li class="treadmill-goods-list-item">
-	       		     <a href="#">
-						<img src="${arr[i].artistImg}">
-						<span>${arr[i].artistName}</span>
-	    				<b>${arr[i].artistName}</b>
-	    				<em>${arr[i].artistId}</em>
-	    				<s class="news"></s>
-				    </a>
-	       		   </li>
-	       		`
-	       	}
-	       	_treadmill.innerHTML = str
-	       	
-	    }
+	        	
+//	        var _script = document.createElement("script");
+//	        	_script.src = "https://shop.yinyuetai.com/goods/listForArt.json?callback=back";
+//	        	document.body.appendChild(_script);
+//	       }	        
+//	       function back(datas){
+//	       	var _treadmill = document.querySelector(".treadmill-goods-list")
+//	       	
+//	       	var arr = datas.data;
+//	       	var str = ''
+//	       	
+//	       	for(var i = 0; i<datas.data.length;i++){		
+//	       		str = str + `
+//	       		   <li class="treadmill-goods-list-item">
+//	       		     <a href="details.html">
+//						<img src="${arr[i].artistImg}">
+//						<span>${arr[i].artistName}</span>
+//	    				<b>${arr[i].artistName}</b>
+//	    				<em>${arr[i].artistId}</em>
+//	    				<s class="news"></s>
+//				    </a>
+//	       		   </li>
+//	       		`
+//	       	}
+//	       	_treadmill.innerHTML = str
+
+           
+        
+        
+}
 

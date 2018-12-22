@@ -29,9 +29,10 @@ define(["jquery"],function($){
 	       	  $(this).css({"borderColor":"#ff6700"});
 	       	  $(this).siblings().css({"borderColor":"#ff6700"});
 	       	  $(".search-list").css({"display":"block"});
-	       	  $.each($(".search-list li"),function(){
-	       	  	$(this).mouseenter(function(){
+	       	  $.each($(".search-list li"),function(index,item){
+	       	  	$(item).mouseenter(function(){
 	       	  		 $(this).css({"background":"#fafafa"});
+	       	  		 $(".search-l").val($(".search-list-cont").eq(index).html());
 	       	  	})
 	       	    $(this).mouseleave(function(){
 	       	  		 $(this).css({"background":"#fff"});
@@ -96,7 +97,6 @@ define(["jquery"],function($){
     	    dataType:"jsonp",
     	    success:function(datas){
     	    	var arr = datas.data
-    	    	console.log(arr);
     	    	$.each($(".jsonp_five li a img"), function(index) {
     	    		$(".jsonp_five li a img").eq(index).attr("src",arr[index].artistImg)
     	    	});
@@ -162,5 +162,4 @@ define(["jquery"],function($){
 	    	$(this).css({"background":"url(../static/icon/t-popup-icons-png8.png) no-repeat","background-position":"-43px 8px","background-color":"rgb(102,102,102)"});
 	    	$(this).html("");
 	    })
-	
 })
