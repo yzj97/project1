@@ -103,35 +103,7 @@ require(["../scripts/config.js"], function() {
 				$index = 1;
 			}
 
-		})
-
-//		$.ajax({
-//			url: "https://localhost:8848/ajax/goodslist.json",
-//			success: function(data) {
-//				var str = "";
-//				for(let i = 0; i < data.length; i++) {
-//					str += `
-//         	  		<div class="main-container-item">
-//         	  	    <img class="bigimg" src="${data[i].src}">
-//		    		<a class="xinghao">${data[i].id}</a>
-//		    		<span class="xinxi">${data[i].describe}</span>
-//		    		<p>${data[i].price}<b>${data[i].oldprice}</b></p>
-//		    		<div class="img-slc">
-//		    			<img src="${data[i].src}">
-//		    			<img src="${data[i].src}">
-//		    			<img src="${data[i].src}">
-//		    		</div>	
-//		    		<a class="love">
-//		    			<i class="iconfont icon-xihuan" style="color: #333333;font-size: 26px;"></i><span>喜欢</span>
-//		    		</a>
-//		    		<a class="chakan">
-//		    			<span>查看详情</span><i class="iconfont icon-jiarugouwuche" style="color: #333333;font-size: 26px;"></i>
-//		    		</a> 
-//		    		</div>
-//         	  	`
-//				}
-				
-				
+		})				
 				class Page {
 					constructor(options) {
 						this.url = options.url;
@@ -274,7 +246,8 @@ require(["../scripts/config.js"], function() {
             		   })
 					}
 					setCookie(){
-	            		this.goods = JSON.parse($.cookie("goods")) || [];
+						this.goods = JSON.parse(localStorage.getItem("goods")) || [];
+						
 	            		
 	            		if(this.goods.length < 1){
 	            			this.goods.push({
@@ -305,9 +278,8 @@ require(["../scripts/config.js"], function() {
 	            			    	
 	            			    	
 	            			    }
-	            		}
-	            		
-	            		$.cookie("goods",JSON.stringify(this.goods))
+	            		}	            		
+	            		localStorage.goods = JSON.stringify(this.goods);
             		
             	}
 			    sortprice(){
@@ -321,7 +293,7 @@ require(["../scripts/config.js"], function() {
 			    				}			    				
 			    			}			    			
 			    		}
-			    		
+			    		console.log(that.res)
 			    		that.display();
 			    	})
 			    	

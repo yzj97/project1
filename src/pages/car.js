@@ -41,7 +41,7 @@ require(["../scripts/config.js"],function(){
       		this.load();
       	}
       	getCookie(){
-      		this.goods = JSON.parse($.cookie("goods"));
+      		this.goods = JSON.parse(localStorage.goods);
       		console.log(this.goods)
       	}
       	load(){
@@ -182,7 +182,7 @@ require(["../scripts/config.js"],function(){
       			}
       		}
       		
-      		$.cookie("goods",JSON.stringify(this.goods));
+      		localStorage.goods = JSON.stringify(this.goods);
       		
       	}
       	

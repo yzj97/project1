@@ -12,7 +12,7 @@ require(["../scripts/config.js"],function(){
 				
 			}
 			getcookie(){				
-				this.username = JSON.parse($.cookie("username"));
+				this.username = JSON.parse(localStorage.getItem("username"));
 				console.log(this.username);
 			}
 			addEvent(){

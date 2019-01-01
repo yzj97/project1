@@ -72,13 +72,31 @@ require(["../scripts/config.js"],function(){
 		var regnow = document.querySelector(".now");
 		var succ = document.querySelector(".succ");
 		var regsel = document.querySelector(".reg");
+		
+		var ano = document.querySelector(".no");		
 		regnow.onclick = function(){
-			if(reg1.test(opwd.value) && reg.test(otxt.value) && auth_code_txt.value == code.value ){
-				console.log(123)
-				regsel.style.display = "none";
-				succ.style.display = "block";
-				
+			var list = JSON.parse(localStorage.getItem("username"));
+			var kaiguan = true;
+			if(otxt.value == ""){
+				alert("请输入手机号！");
+			}		
+			for(var i = 0; i< list.length;i++){			  
+             if(otxt.value == list[i].user){
+					 kaiguan = false;
+			 }
+				if(kaiguan && reg1.test(opwd.value) && reg.test(otxt.value) && auth_code_txt.value == code.value){
+					regsel.style.display = "none";
+					succ.style.display = "block";	
+				}
+                   
 			}
+			
+		}
+		ano.onclick = function(){
+
+			regsel.style.display = "block";
+			succ.style.display = "none";	
+
 		}
 		
 //存cookie
@@ -86,21 +104,30 @@ class Regsiter{
 			constructor(){
 				this.btn = $(".now");
 				this.user = $(".txt");
-				this.pass = $(".pwd");				
+				this.pass = $(".pwd");
+				this.auth = $(".auth-code-txt")	;
+				this.code = $(".auth-code-ipt .code");
+				this.reg = 	/^1\d{10}$/;
+				this.reg1 = /^(?=.*[a-z])(?=.*\d)(?=.*[#@!~%^&*])[a-z\d#@!~%^&*]{8,16}$/;		
 				this.addEvent()
 			}
 			addEvent(){
 				var that = this;
 				this.btn.on("click",function(){
-					that.userV = that.user.val();
-					that.passV = that.pass.val();
-					that.setCookie();
+					if(that.user.val() == ""){
+
+					}else{
+                      that.userV = that.user.val();
+					  that.passV = that.pass.val();
+					  that.setitem();
+					}
+					
 				})
 			}
-			setCookie(){
+			setitem(){
 //				读取初始cookie,用来查看是否是第一次注册
-				if($.cookie("username")){
-					this.username = JSON.parse($.cookie("username"))
+				if(localStorage.getItem("username")){
+					this.username = JSON.parse(localStorage.getItem("username"));
 				}else{
 					this.username = []
 				}
@@ -123,13 +150,15 @@ class Regsiter{
 						}
 					})
 					if(onOff){
-						this.username.push({
-							user:this.userV,
-							pass:this.passV
-						})
+						if(this.reg1.test(this.pass.val()) && this.reg.test(this.user.val()) && this.auth.val() == this.code.val()){
+							this.username.push({
+								user:this.userV,
+								pass:this.passV
+							})  
+						}
 					}
 				}
-				$.cookie("username",JSON.stringify(this.username))
+				localStorage.username = JSON.stringify(this.username);
 			}
 		}
 		new Regsiter()
@@ -141,10 +170,10 @@ class Regsiter{
 			
 			odiv.className =  "tanchukuang";
 			odiv.innerHTML = `未保存您的信息，是否跳转！
-			 <a class="tiaozhuan" href="login.html" target="_blank">确定</a>
+			 <a class="tiaozhuan" href="login.html" target="_blank">是</a>
+			 <a class="butiaozhuan" href="#" target="_blank">否</a>
 			`
-			document.body.appendChild(odiv);
-			
+			document.body.appendChild(odiv);			
 			var oa = document.querySelector(".tanchukuang .tiaozhuan")
 			oa.onclick = function(){				
 				oa.parentElement.remove();				
